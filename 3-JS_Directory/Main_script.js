@@ -3,6 +3,7 @@
         /*All functions imported */
     //------------------------------------------------------------
 
+import {StartLoader, StopLoader} from "./Animation_loader.js";    
 import {Call_Meteomatics_API} from "./Get_API_data.js";
 import {Date_today} from "./handle_dates.js";
 import {Get_sunrise, Get_sunset, Display_apparent_temperature, Display_weather_for_the_day, Temperature_right_now} from "./daily_weather_data_functions.js";
@@ -47,9 +48,10 @@ const   Main_pack_weekly_collection = document.getElementsByClassName("Main_pack
     //------------------------------------------------------------
         /*Call_Meteomatics_API calls API and store data temporary into tabs */
     //------------------------------------------------------------
+    StartLoader();
 
     Call_Meteomatics_API(Hourly_WeatherData_Collection, Daily_WeatherData_collection)
-    .then(() => { main() })
+    .then(() => { StopLoader(); main(); })
     .catch(error=> console.error("main function not run | check ft calling API", error));
 
 
