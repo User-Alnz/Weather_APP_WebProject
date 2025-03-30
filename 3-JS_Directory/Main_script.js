@@ -3,9 +3,10 @@
         /*All functions imported */
     //------------------------------------------------------------
 
-import {StartLoader, StopLoader} from "./Animation_loader.js";    
+import {StartLoader, StopLoader} from "./Animation_loader.js";
+import {hanldeDynamicBackgroundChange} from "./changeBackgroundAnimation.js";
 import {Call_Meteomatics_API} from "./Get_API_data.js";
-import {Date_today} from "./handle_dates.js";
+import {Date_today, DisplayDateSyncInRealTime} from "./handle_dates.js";
 import {Get_sunrise, Get_sunset, Display_apparent_temperature, Display_weather_for_the_day, Temperature_right_now} from "./daily_weather_data_functions.js";
 import {main_script_handle_details} from "./More_details_functions.js";
 import {main_script_handle_dates_and_temperatures_for_week} from "./weekly_weather_data_functions.js";
@@ -29,7 +30,6 @@ var     Daily_WeatherData_collection = [];
 const   icon_current_weather = document.getElementById("icon_current_weather");
 const   display_sunrise =document.getElementById("daily_sunrise");
 const   display_sunset = document.getElementById("daily_sunset");
-const   display_date_today = document.getElementById("date");
 const   display_temp_now = document.getElementById("current_temperature");
 const   display_apparent_temperature = document.getElementById("apparent_temperature");
 const   display_apparent_temperature_description = document.getElementById("apparent_temperature_description");
@@ -49,9 +49,10 @@ const   Main_pack_weekly_collection = document.getElementsByClassName("Main_pack
         /*Call_Meteomatics_API calls API and store data temporary into tabs */
     //------------------------------------------------------------
     StartLoader();
+    hanldeDynamicBackgroundChange();
 
     Call_Meteomatics_API(Hourly_WeatherData_Collection, Daily_WeatherData_collection)
-    .then(() => { StopLoader(); main(); })
+    .then(() => {  main(); StopLoader(); })
     .catch(error=> console.error("main function not run | check ft calling API", error));
 
 
@@ -60,14 +61,17 @@ const   Main_pack_weekly_collection = document.getElementsByClassName("Main_pack
     //------------------------------------------------------------
 async function main()
 {
+    const   DateObject = new Date(); 
+    let     seconds = DateObject.getSeconds();
+    let     SynchronizeTimeToRealTimeSpending = (60 - seconds) * 1000;
   
     try
     {
         /* daily_weather_data - selection in DOM */
-
         display_sunrise.innerHTML = Get_sunrise(Daily_WeatherData_collection);
         display_sunset.innerHTML = Get_sunset(Daily_WeatherData_collection);
-        display_date_today.innerHTML = Date_today();
+        Date_today();
+        setTimeout(() => DisplayDateSyncInRealTime(), SynchronizeTimeToRealTimeSpending); 
         display_apparent_temperature.innerHTML = Display_apparent_temperature(Hourly_WeatherData_Collection);
         display_temp_now.innerHTML = Temperature_right_now(Hourly_WeatherData_Collection);
         
@@ -78,7 +82,7 @@ async function main()
         main_script_handle_icons_and_descriptions_per_hours(Hourly_WeatherData_Collection, Daily_WeatherData_collection, Main_pack_daily_collection);
 
         
-        main_script_handle_details( Hourly_WeatherData_Collection, display_weather_more_details);
+        main_script_handle_details(Hourly_WeatherData_Collection, display_weather_more_details);
 
         /* weekly_weather_data - selection in DOM*/
 
