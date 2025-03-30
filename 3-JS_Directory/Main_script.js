@@ -1,4 +1,15 @@
     console.log("This project is made from scratch and for educational purpose\n\nTech used: HTML/CSS/JS. the app is fully responsive and will adapt all screen type & size even landscape orientation on phone ;)\n\nVisit my https://github.com/User-Alnz");
+    
+    //------------------------------------------------------------
+        /*All CSSFiles to bo compiled with webpack into bundle.js*/
+    //------------------------------------------------------------
+    import '../2-CSS_Directory/AnimationLoader.css';
+    import '../2-CSS_Directory/Fonts.css';
+    import '../2-CSS_Directory/Nav_top_bar_menu.css';
+    import '../2-CSS_Directory/Section_daily_weather_data.css';
+    import '../2-CSS_Directory/Section_weekly_weather_data.css';
+    import '../2-CSS_Directory/Main_layout.css';
+
     //------------------------------------------------------------
         /*All functions imported */
     //------------------------------------------------------------
