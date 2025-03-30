@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <Title>Weather_app Landscape</Title>
+        <!--Media queries-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Fonts - Roboto | from Google : https://fonts.google.com/selection/embed-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Jersey+15&family=Jersey+25&family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,93.1,200..1000;1,6..12,93.1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+         <!--End Fonts-->
+    </head>
+
+    <body>
+        
+        <div class="container">
+
+            <nav class="top_bar_menu">
+
+                <div class="top_right_corner_section">
+
+                    <p id="App_name">Unique Weather.APP</p>
+                    <img id ="icon_location"src="/Images_source/Search_icons/location_black.png" alt="location icon">
+                    <p id="location">weather in <strong>France</strong> now </p>
+                    <button id="Choose_Celsius">C°</button><button id="Farhenheit">F°</button>
+
+                </div>
+
+                <div class="top_left_corner_section">
+
+                    <div class="menu">
+                    <p>MENU</p>
+                    </div>
+                    <button id="Choose_ENG">ENG</button><button id="Choose_FR">FR</button>
+
+                </div>
+            </nav>
+            <div class="empty_layout_room_manager" >
+            </div>
+            <!-- <div class="layout"> -->
+            <section class="daily_weather_data">
+                
+                <div class="day_item_1">
+
+                    <div class="box_icon_current_weather">
+
+                        <div>
+                            <img id="icon_current_weather" src="/Images_source/PNG_icons_256x256/partlysunny.png" alt="icon_current_weather">
+                        </div>
+                        
+                        <div>
+                            <p id="daily_sunrise">Sunrise : 5 AM</p>
+                            <p id="daily_sunset">Sunset : 8 PM</p>
+                        </div>
+
+                    </div>
+
+                    <div class="current_weather_data">
+                        <div> 
+                            <p id="date">Friday 27 july 15:00 </p>
+                        </div>
+
+                        <div>
+                            <p id="current_temperature">+22°C</p>
+                        </div>
+
+                        <div>
+                            <p id="apparent_temperature">Feels Like 23°</p>
+                            <p id="apparent_temperature_description">The whole day will be cloudy. No precipitation</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="more_details">
+                        <div>
+                            <p id ="more_details_title">MORE DETAILS :</p>
+                        </div>
+                        
+                        <div>
+                            <p id="wind_speed">Wind speed : 1-8 Km/h</p>
+                            <p id="air_humidity">Air humidity : 42 - 56%</p>
+                            <p id="pressure">Pressure : 747 - 942 mm</p>
+                            <p id="precipitation">Precipiation probability : 3%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="day_item_2">
+
+                    <div class="Main_pack">
+
+                        <p class="name_daily_status">NIGHT</p>
+
+                        <div class="pack">
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">00:00</p>
+
+                            </div>
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">03:00</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                                
+                    <div class="Main_pack">
+
+                        <p class="name_daily_status">MORNING</p>
+                                    
+                        <div class="pack">
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">06:00</p>
+
+                            </div>
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">09:00</p>
+
+                            </div>
+
+                        </div>
+                                        
+                    </div>
+
+                                
+
+                    <div class="Main_pack">
+                        
+                        <p class="name_daily_status">DAY</p>
+                                    
+                        <div class="pack">
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">12:00</p>
+
+                            </div>
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">15:00</p>
+
+                            </div>
+
+                        </div>
+                                        
+                    </div>
+
+                               
+
+                    <div class="Main_pack">
+                        
+                        <p class="name_daily_status">EVENING</p>
+                                    
+                        <div class="pack">
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">18:00</p>
+
+                            </div>
+
+                            <div class="pack_time">
+
+                                <img class="daily_icons" src="/Images_source/PNG_icons_256x256/chancetstorms.png" alt="">
+                                <p class="daily_temp">22°C</p>
+                                <p class="current_hours">21:00</p>
+
+                            </div>
+
+                        </div>
+                                        
+                    </div>
+
+                    
+                </div>
+
+            </section>
+
+
+
+            <section class="weekly_weather_data">
+
+                <div class="weekly_item_1">
+                    <!--Delete empty id ! Later-->
+                    <div class="empty" >
+                    </div>
+
+                    <div class="get_selection">
+                        <p id="selection_pointer">TODAY</p>
+                    </div>
+                    <div class="not_selected"></div>
+                    <div class="not_selected"></div>
+                    <div class="not_selected"></div>
+                    <div class="not_selected"></div>
+                    <div class="not_selected"></div>
+                    <div class="button">
+                        <p id="selection_button">FORCAST UP COMMING DAYS</p>
+                    </div>
+
+                    <div class="empty" >
+                    </div>
+                </div>
+
+
+                <div class="weekly_item_2">
+                    <!--<div class="selection_day">
+                        <p>TODAY</p>
+                    </div>   
+                            add a wrapper if necessary -->
+                            <div class="empty" id="empty_decoration_style">
+                            </div>
+                        <!--Delete selection id ! Later-->
+                        <div class="Main_pack_weekly" id ="get_selection_Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="Main_pack_weekly">
+                            <p class="day">Friday</p>
+                            <p class="day_date">25 july</p>
+                            <p class="min_temp">min. 20°C</p>
+                            <p class="max_temp">max. 20°C</p>
+                            <img class="weekly_icons" src="/Images_source/PNG_icons_256x256/clear.png" alt="" >
+                            <p class="weekly_comment">sunny</p>
+                        </div>
+
+                        <div class="empty" id="empty_decoration_style">
+                        </div>
+
+                    
+                </div>
+            </section>
+
+            <!--</div> -->
+        </div>
+
+    
+    </body>
+</html>

@@ -27,7 +27,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: '1-Html_Directory/UI_Weatherapp_landscape.html',  // Your source HTML
+            template: '1-Html_Directory/IndexToCompile.html',  // Your source HTML
             filename: 'index.html',  // Output file
             inject: 'body',  // Inject scripts before `</body>`
         }),
