@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './3-JS_Directory/Main_script.js', // Entry point
+    entry: './client/3-JS_Directory/Main_script.js', // Entry point
     output: {
         filename: 'bundle.js', // Output bundle
         path: path.resolve(__dirname, 'dist'), // Output directory

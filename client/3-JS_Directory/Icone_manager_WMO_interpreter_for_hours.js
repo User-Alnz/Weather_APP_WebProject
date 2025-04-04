@@ -21,7 +21,7 @@ export function main_script_handle_icons_and_descriptions_per_hours(Hourly_Weath
     retrieve_jsonfile()
     .then((WMO_json)=> {
 
-        display_icons(Hourly_WeatherData_Collection, Daily_WeatherData_collection, Main_pack_daily_collection, WMO_json)
+        display_icons(Hourly_WeatherData_Collection, Daily_WeatherData_collection, Main_pack_daily_collection, WMO_json);
 
     })
     .catch(error=> console.error("main_script_handle_icons_and_descriptions_per_hours", error));

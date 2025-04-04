@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "./src/backend/server",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch --clear-screen=false ./src/backend/server.ts",
+    "prod": "node dist/backend/server.js",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "cp package.json package-lock.json .env ../serverBuilt/ && echo '✅ Build complete! /serverBuilt created ! and package.json, package-lock.json, and .env copied to serverBuilt/'",
+    "InstallDep": "npm install --omit=dev"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

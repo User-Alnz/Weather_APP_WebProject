@@ -10,6 +10,7 @@
     import '../2-CSS_Directory/Section_weekly_weather_data.css';
     import '../2-CSS_Directory/Main_layout.css';
 
+
     //------------------------------------------------------------
         /*All functions imported */
     //------------------------------------------------------------
@@ -23,7 +24,7 @@ import {main_script_handle_details} from "./More_details_functions.js";
 import {main_script_handle_dates_and_temperatures_for_week} from "./weekly_weather_data_functions.js";
 import {main_script_handle_icon_and_description_for_the_day} from "./Icone_manager_WMO_interpreter_for_the_day.js";
 import {main_script_handle_icons_and_descriptions_per_hours} from "./Icone_manager_WMO_interpreter_for_hours.js";
-import {main_script_handle_icons_and_descriptions_for_the_week} from "./Icone_manager_WMO_interpreter_for_the_week.js"
+import {main_script_handle_icons_and_descriptions_for_the_week} from "./Icone_manager_WMO_interpreter_for_the_week.js";
 
     //------------------------------------------------------------
         /*Json file from API call is temp store into tab to handle data */
@@ -39,7 +40,7 @@ var     Daily_WeatherData_collection = [];
     //------------------------------------------------------------
 
 const   icon_current_weather = document.getElementById("icon_current_weather");
-const   display_sunrise =document.getElementById("daily_sunrise");
+const   display_sunrise = document.getElementById("daily_sunrise");
 const   display_sunset = document.getElementById("daily_sunset");
 const   display_temp_now = document.getElementById("current_temperature");
 const   display_apparent_temperature = document.getElementById("apparent_temperature");
